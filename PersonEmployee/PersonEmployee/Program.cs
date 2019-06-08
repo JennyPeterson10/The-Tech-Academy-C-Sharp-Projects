@@ -12,6 +12,7 @@ namespace PersonEmployee
         {
             Employee employee = new Employee() { FirstName = "Sample", LastName = "Student" };
             employee.SayName();
+            employee.Quit();
             Console.ReadLine();
         }
     }

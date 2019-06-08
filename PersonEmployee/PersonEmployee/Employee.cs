@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace PersonEmployee
 {
-    public class Employee : Person
+    public class Employee : Person, IQuitable
     {
         public int Id { get; set; }
+
+        public void Quit()
+        {
+            Console.WriteLine("I quit.");
+        }
     }
 }
