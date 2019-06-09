@@ -12,7 +12,7 @@ namespace PersonEmployee
 
         public void Quit()
         {
-            Console.WriteLine("I quit.");
+            Console.WriteLine("You should quit.");
         }
     }
 }
