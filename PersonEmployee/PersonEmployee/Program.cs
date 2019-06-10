@@ -45,13 +45,20 @@ namespace PersonEmployee
             //}
 
             //instantiate employee with type Things
-            Employee<string> employee1 = new Employee<string>() { Things = { "desk", "computer", "pencil", "paper" } };
-            Employee<int> employee2 = new Employee<int>() { Things = { 1, 4, 65, 3, 8 } };
+            Employee<string> employee1 = new Employee<string> { Things = new List<string> { "desk", "computer", "pencil", "paper" } };
+            Employee<int> employee2 = new Employee<int> { Things = new List<int> { 1, 4, 65, 3, 8 } };
+
             foreach(string thing in employee1.Things)
             {
                 Console.WriteLine(thing);
-                Console.ReadLine();
             }
+            Console.ReadLine();
+
+            foreach (int thing in employee2.Things)
+            {
+                Console.WriteLine(thing);
+            }
+            Console.ReadLine();
 
         }
     }
