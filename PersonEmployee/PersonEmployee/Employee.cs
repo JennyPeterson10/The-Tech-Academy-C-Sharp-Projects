@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace PersonEmployee
 {
-    public class Employee : Person, IQuitable
+    public class Employee<T> : Person, IQuitable
     {
         public int Id { get; set; }
+        public List<T> Things { get; set; }
 
         //include method Quit() from IQuitable interface
         public void Quit()
@@ -17,7 +18,7 @@ namespace PersonEmployee
         }
 
         //overload "==" operator
-        public static bool operator == (Employee emp1, Employee emp2)
+        public static bool operator == (Employee<T> emp1, Employee<T> emp2)
         {
             bool status = false;
             if (emp1.Id == emp2.Id)
@@ -28,7 +29,7 @@ namespace PersonEmployee
         }
 
         //overload "!=" operator
-        public static bool operator != (Employee emp1, Employee emp2)
+        public static bool operator != (Employee<T> emp1, Employee<T> emp2)
         {
             bool status = false;
             if (emp1.Id != emp2.Id)
