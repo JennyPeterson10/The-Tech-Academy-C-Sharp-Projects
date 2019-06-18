@@ -1,0 +1,56 @@
+﻿<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow justify-content-center">
+        <div class="card-header text-center">
+            <h5 class="m-0">Please fill out the following information to get your quote today.</h5>
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("Coverage", "Home", FormMethod.Post))
+            {
+            <div class="row no-gutters">
+                <div class="form-group col-md-12">
+                    First Name <br />
+                    <input name="FirstName" type="text" class="form-control" required />
+                </div>
+                <div class="form-group col-md-12">
+                    Last Name <br />
+                    <input name="LastName" type="text" class="form-control" required />
+                </div>
+                <div class="form-group col-md-12">
+                    Email Address <br />
+                    <input name="EmailAddress" type="email" class="form-control" required />
+                </div>
+                <div class="form-group col-md-12">
+                    Date of Birth <br />
+                    <input name="DateOfBirth" type="date" class="form-control" required />
+                </div>
+                <div class="form-group col-md-12">
+                    Car Year <br />
+                    <input name="CarYear" type="text" class="form-control" required />
+                </div>
+                <div class="form-group col-md-12">
+                    Car Make <br />
+                    <input name="CarMake" type="text" class="form-control" required />
+                </div>
+                <div class="form-group col-md-12">
+                    Car Model <br />
+                    <input name="CarModel" type="text" class="form-control" required />
+                </div>
+                <div class="form-check col-md-12">
+                    <input name="DUI" type="checkbox" class="form-check-inline" value="true" />
+                    Check here if you have ever had a DUI <br /> <br />
+                </div>
+                <div class="form-group col-md-12">
+                    How many speeding tickets have you received? <br />
+                    <input name="SpeedingTickets" type="text" class="form-control" required />
+                </div>
+                <div class="form-group col-md-12">
+                    <p>Please select your coverage type: </p>
+                    <label class="radio-inline"><input name="FullCoverage" type="radio" class="form-check-inline" value="true" /> Full Coverage </label> <br />
+                    <label class="radio-inline"><input name="FullCoverage" type="radio" class="form-check-inline" value="false" /> Liability </label>
+                </div>
+                <button type="submit" class="btn btn-block btn-secondary">Submit</button>
+            </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+﻿@using AutoInsurance.Models
+@model List<User>
+
+<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">User Quotes</h5>
+        </div>
+        <div class="card-body text-left">
+            <div class="row border-bottom" >
+                <div class="col">
+                    First Name
+                </div>
+                <div class="col">
+                    Last Name
+                </div>
+                <div class="col">
+                    Email Address
+                </div>
+                <div class="col">
+                    Quote
+                </div>
+            </div>
+
+
+            @foreach (var user in Model)
+            {
+                using (Html.BeginForm("Admin", "Home", FormMethod.Post))
+                {
+                    <div class="row">
+                        <div class="col text-left">
+                            @user.FirstName
+                        </div>
+                        <div class="col text-left">
+                            @user.LastName
+                        </div>
+                        <div class="col">
+                            @user.EmailAddress
+                        </div>
+                        <div class="col">
+                            $@user.Quote
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>
+
+
